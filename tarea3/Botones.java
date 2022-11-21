@@ -115,7 +115,11 @@ class Botones {
 
         agarrar.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-                pp.getComprador().addBebida(pp.getExpendedor().getDepositoCompra().getBebida());
+                Bebida b = pp.getExpendedor().getDepositoCompra().getBebida();
+
+                if (b != null) {
+                    pp.getComprador().addBebida(b);
+                }
                 pp.repaint();
             }
         });
@@ -152,5 +156,24 @@ class Botones {
         drink.setOpaque(false);
         drink.setContentAreaFilled(false);
         pp.add(drink);
+
+        JButton vuelto = new JButton();
+
+        vuelto.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                Moneda m = pp.getExpendedor().getVuelto();
+
+                if (m != null) {
+                    pp.getComprador().addMoneda(m);
+                }
+
+                pp.repaint();
+            }
+        });
+
+        vuelto.setBounds(357, 300, 25, 125);
+        vuelto.setOpaque(false);
+        vuelto.setContentAreaFilled(false);
+        pp.add(vuelto);
     }
 }

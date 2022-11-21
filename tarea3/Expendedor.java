@@ -171,6 +171,14 @@ class Expendedor extends JPanel {
         g.drawRect(this.getX() + 357, this.getY() + 200, 25, 25);
         g.drawRect(this.getX() + 357, this.getY() + 250, 25, 25);
 
+        g.setColor(new Color(100, 100, 100));
+        g.fillRect(this.getX() + 357, this.getY() + 300, 25, 125);
+        g.setColor(Color.black);
+        g.drawRect(this.getX() + 357, this.getY() + 300, 25, 125);
+
+        vuelto.setBounds(this.getX() + 359, this.getY() + 302, 25, 125);
+        vuelto.paint(g);
+
         compra.paint(g);
     }
 }
