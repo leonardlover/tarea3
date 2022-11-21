@@ -145,11 +145,11 @@ class Expendedor extends JPanel {
         g.setColor(new Color(100, 100, 100));
         g.fillRect(this.getX() + 340, this.getY() + 500, 60, 100);
 
-        coca.setBounds(105, 105, 135, 460);
+        coca.setBounds(105, 525, 135, 460);
         coca.paint(g);
-        sprite.setBounds(185, 105, 135, 460);
+        sprite.setBounds(185, 525, 135, 460);
         sprite.paint(g);
-        fanta.setBounds(265, 105, 135, 460);
+        fanta.setBounds(265, 525, 135, 460);
         fanta.paint(g);
 
         g.setColor(new Color(141, 219, 242, 64));

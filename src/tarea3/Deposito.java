@@ -35,7 +35,7 @@ class Deposito extends JPanel {
     public void paint(Graphics g) {
         if (!stock.isEmpty()) {
             for (int i = 0; i < stock.size() && i < 14; i++) {
-                stock.get(i).setBounds(this.getX() + (i % 2) * 40, this.getY() + 70 * (i / 2), 30, 60);
+                stock.get(i).setBounds(this.getX() + (i % 2) * 40, this.getY() - 70 * (i / 2), 30, 60);
                 stock.get(i).paint(g);
             }
         }
