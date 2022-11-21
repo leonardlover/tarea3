@@ -48,6 +48,20 @@ class Botones {
         coin3.setContentAreaFilled(false);
         pp.add(coin3);
 
+        JButton comprar = new JButton();
+
+        comprar.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                pp.getComprador().addBebida(pp.getExpendedor().getDepositoCompra().getBebida());
+                pp.repaint();
+            }
+        });
+
+        comprar.setBounds(340, 500, 60, 100);
+        comprar.setOpaque(false);
+        comprar.setContentAreaFilled(false);
+        pp.add(comprar);
+
         JButton drink = new JButton();
 
         drink.addMouseListener(new MouseAdapter() {
