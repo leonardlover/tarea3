@@ -7,4 +7,4 @@
 
 #### Ejecucion:
 
-- TODO
+- Clonar repositorio, hacer cd en el directorio y correr make.
