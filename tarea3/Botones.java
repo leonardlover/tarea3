@@ -48,19 +48,96 @@ class Botones {
         coin3.setContentAreaFilled(false);
         pp.add(coin3);
 
-        JButton comprar = new JButton();
+        JButton coca = new JButton();
 
-        comprar.addMouseListener(new MouseAdapter() {
+        coca.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                try {
+                    pp.getExpendedor().comprarBebida(pp.getComprador().getMoneda(), 1);
+                    pp.getComprador().setCoin(0);
+                }
+                catch (Exception ex) {
+                    System.out.println(ex.getMessage());
+                }
+
+                pp.repaint();
+            }
+        });
+
+        coca.setBounds(357, 150, 25, 25);
+        coca.setOpaque(false);
+        coca.setContentAreaFilled(false);
+        pp.add(coca);
+
+        JButton sprite = new JButton();
+
+        sprite.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                try {
+                    pp.getExpendedor().comprarBebida(pp.getComprador().getMoneda(), 2);
+                    pp.getComprador().setCoin(0);
+                }
+                catch (Exception ex) {
+                    System.out.println(ex.getMessage());
+                }
+
+                pp.repaint();
+            }
+        });
+
+        sprite.setBounds(357, 200, 25, 25);
+        sprite.setOpaque(false);
+        sprite.setContentAreaFilled(false);
+        pp.add(sprite);
+
+        JButton fanta = new JButton();
+
+        fanta.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                try {
+                    pp.getExpendedor().comprarBebida(pp.getComprador().getMoneda(), 3);
+                    pp.getComprador().setCoin(0);
+                }
+                catch (Exception ex) {
+                    System.out.println(ex.getMessage());
+                }
+
+                pp.repaint();
+            }
+        });
+
+        fanta.setBounds(357, 250, 25, 25);
+        fanta.setOpaque(false);
+        fanta.setContentAreaFilled(false);
+        pp.add(fanta);
+
+        JButton agarrar = new JButton();
+
+        agarrar.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 pp.getComprador().addBebida(pp.getExpendedor().getDepositoCompra().getBebida());
                 pp.repaint();
             }
         });
 
-        comprar.setBounds(340, 500, 60, 100);
-        comprar.setOpaque(false);
-        comprar.setContentAreaFilled(false);
-        pp.add(comprar);
+        agarrar.setBounds(340, 500, 60, 100);
+        agarrar.setOpaque(false);
+        agarrar.setContentAreaFilled(false);
+        pp.add(agarrar);
+
+        JButton refill = new JButton();
+
+        refill.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                pp.getExpendedor().refill();
+                pp.repaint();
+            }
+        });
+
+        refill.setBounds(100, 100, 240, 500);
+        refill.setOpaque(false);
+        refill.setContentAreaFilled(false);
+        pp.add(refill);
 
         JButton drink = new JButton();
 

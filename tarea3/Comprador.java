@@ -35,6 +35,8 @@ class Comprador extends JPanel {
             case 3:
                 moneda = new Moneda1000(id++);
                 break;
+            default:
+                moneda = null;
         }
     }
 
