@@ -137,5 +137,12 @@ class Expendedor extends JPanel {
 
         g.setColor(new Color(200, 40, 40));
         g.fillRect(this.getX() + 100, this.getY() + 100, 300, 500);
+        g.setColor(Color.black);
+        g.drawRect(this.getX() + 100, this.getY() + 100, 300, 500);
+
+        g.setColor(new Color(100, 100, 100));
+        g.fillRect(this.getX() + 100, this.getY() + 500, 300, 100);
+        g.setColor(Color.black);
+        g.drawRect(this.getX() + 100, this.getY() + 500, 300, 100);
     }
 }

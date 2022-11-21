@@ -18,5 +18,8 @@ class Moneda100 extends Moneda {
         g.fillOval(this.getX(), this.getY(), 20, 20);
         g.setColor(Color.black);
         g.drawOval(this.getX(), this.getY(), 20, 20);
+
+        g.setColor(Color.white);
+        g.drawString(super.getSerie(), this.getX() + 6, this.getY() + 15);
     }
 }

@@ -16,5 +16,10 @@ class Sprite extends Bebida {
 
         g.setColor(Color.green);
         g.fillRect(this.getX(), this.getY(), 30, 60);
+        g.setColor(Color.black);
+        g.drawRect(this.getX(), this.getY(), 30, 60);
+
+        g.setColor(Color.white);
+        g.drawString(super.getSerie(), this.getX() + 10, this.getY() + 35);
     }
 }
