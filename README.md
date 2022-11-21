@@ -7,4 +7,4 @@
 
 #### Ejecucion:
 
-- Clonar repositorio, hacer cd en el directorio y correr make.
+- Clonar repositorio, hacer cd en el directorio y correr make. Mañana se agregara todo como un proyecto Netbeans.
