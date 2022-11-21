@@ -8,7 +8,7 @@ public class PanelPrincipal extends JPanel {
 
     public PanelPrincipal() {
         com = new Comprador();
-        exp = new Expendedor(14, 10);
+        exp = new Expendedor(14, 5);
         this.setLayout(null);
         this.setBackground(new Color(128, 128, 128));
     }
